@@ -19,11 +19,19 @@ var UIX = (function() {
         }
     }
 
+    function _setValue(e) {
+        if (e.target.value) {
+            UIX.get[e.target.id] = UIX.utils.stringCast(e.target.value);
+        }
+    }
+
     function _setEvents(id, opt) {
 
         var $item = UIX.utils.get.$1('#' + id);
 
-        console.log($item);
+        $item.addEventListener('input', _setValue);
+        $item.addEventListener('change', _setValue);
+        $item.addEventListener('keyup', _setValue);
 
         if (opt.onClick) {
             $item.addEventListener('click', opt.onClick);
@@ -44,6 +52,7 @@ var UIX = (function() {
     function _add(type, opt) {
 
         var insertObj = _getVals(type, opt);
+        UIX.get[insertObj.id] = insertObj.value;
         var code = UIX.utils.tmpl.render(UIX.items[type].templ, insertObj);
         _insert(code);
         _setEvents(insertObj.id, opt);
@@ -68,7 +77,8 @@ var UIX = (function() {
         addRange: _addRange,
         addButton: _addButton,
         addHr: _addHr,
-        target: null
+        target: null,
+        get: {}
     };
 
 }());

@@ -49,6 +49,44 @@ UIX.utils.randomKey = function (len) {
 	return id;
 };
 
+UIX.utils.stringCast = function (s) {
+
+	var check = function(s) {
+		if (s.toLowerCase() === 'true') {
+			return true;
+		}
+		if (s.toLowerCase() === 'false') {
+			return false;
+		}
+		if (!isNaN(s.replace(',', '.'))) {
+			s = s.replace(',', '.');
+			if (s.indexOf('.')) {
+				return parseFloat(s);
+			} else {
+				return parseInt(s);
+			}
+		}
+		return s;
+	};
+
+	if (s === '') {
+		return '';
+	}
+
+	if (s.indexOf('{') === -1) {
+		return check(s);
+	}
+
+	try {
+		var o = JSON.parse(s);
+		if (o && typeof o === "object" && o !== null) {
+			return o;
+		}
+	} catch (e) {
+		check(s);
+	}
+};
+
 UIX.utils.extend = function() {
 
     // Variables
