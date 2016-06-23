@@ -1,0 +1,92 @@
+/* Checkbox as swish */
+.uix {
+
+    input[type=checkbox] {
+        display: none;
+    }
+    input[type=checkbox] + label {
+        user-select: none;
+        cursor: pointer;
+    }
+    input[type=checkbox] + label .unchecked {
+        display: inline-block;
+    }
+    input[type=checkbox] + label .checked {
+        display: none;
+    }
+    input[type=checkbox]:checked + label .unchecked {
+        display: none;
+    }
+    input[type=checkbox]:checked + label .checked {
+        display: inline-block;
+    }
+    .checked .fa,
+    .unchecked .fa {
+        color: $mainColor;
+        font-size: 1.4em;
+        vertical-align: bottom;
+        margin-right: 0.1em;
+    }
+
+    /* Checkbox as swish */
+    .swish-wrapper {
+
+        .label {
+            margin-bottom: 0.4em;
+        }
+
+        .swish {
+            position: absolute;
+            margin-left: -9999px;
+            visibility: hidden;
+        }
+        .swish + label {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+            user-select: none;
+        }
+        input.swish-round + label {
+            padding: 2px;
+            width: 42px;
+            height: 23px;
+            background-color: $mainColorDarker;
+            border-radius: 60px;
+            vertical-align: top;
+            margin: 0 0.4em 0.4em 0;
+            box-sizing: border-box;
+        }
+        input.swish-round + label:after,
+        input.swish-round + label:before {
+            display: block;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            bottom: 1px;
+            content: "";
+        }
+        input.swish-round + label:before {
+            right: 1px;
+            background-color: #ddd;
+            border-radius: 25px;
+            transition: background 0.4s;
+        }
+        input.swish-round + label:after {
+            width: 21px;
+            background-color: $mainColor;
+            border-radius: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+            transition: margin 0.4s;
+        }
+        input.swish-round + label:hover:after {
+            background-color: $mainColorLighter;
+        }
+        input.swish-round:checked + label:before {
+            background-color: $mainColorDarker;
+        }
+        input.swish-round:checked + label:after {
+            margin-left: 19px;
+        }
+    }
+}

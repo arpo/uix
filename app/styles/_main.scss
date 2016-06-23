@@ -1,0 +1,119 @@
+body {
+	background-color: $backgroundColor;
+	color: $white;
+}
+.uix {
+	&.max600 {
+		max-width: 800px;
+	}
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 0.9em;
+	color: $textColor;
+	h1 {
+		font-size: 28px;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h3 {
+		font-size: 22px;
+	}
+	h4 {
+		font-size: 20px;
+	}
+	h5 {
+		font-size: 18px;
+	}
+	.block {
+		display: block;
+	}
+	.full {
+		width: 100%;
+	}
+	.half {
+		width: 50%;
+	}
+	fieldset,
+	section {
+		user-select: none;
+		position: relative;
+		margin-bottom: 0.5em;
+	}
+	label {
+		padding: 0.3em 0.3em 0 0;
+		margin: 0 0 0.5em;
+		display: inline-block;
+		vertical-align: top;
+		user-select: none;
+	}
+	fieldset,
+	hr {
+		border: 1px solid $mainColor;
+		padding: 0.5em 1em;
+		margin-bottom: 1em;
+	}
+	hr {
+		border-top: 1px solid $mainColor;
+		padding: 0;
+		margin: 1em 0;
+	}
+	input[type="text"],
+	textarea {
+		padding: 0.3em 1em;
+		margin: 0 0.4em 0.75em 0;
+		border: 1px solid $mainColor;
+		background-color: $darkgray;
+		font-family: 'Roboto Condensed', sans-serif;
+		border-radius: 2px;
+		font-size: 0.9em;
+		color: $textColor;
+		resize: none;
+		position: relative;
+		top: -2px;
+		box-sizing: border-box;
+		vertical-align: top;
+	}
+	button,
+	output,
+	select {
+		color: $textColor;
+		background-color: $mainColor;
+		padding: 0.3em 1em;
+		margin: -0.1em 0.2em 0.3em 0;
+		border-radius: 2px;
+		height: 1.85em;
+		display: inline-block;
+		vertical-align: top;
+		white-space: nowrap;
+		box-sizing: border-box;
+		border: 0;
+	}
+	button {
+		cursor: pointer;
+	}
+	button:hover {
+		background-color: $hoverColor;
+	}
+	button:disabled {
+		color: $disableColor;
+		background-color: $mainColor;
+		cursor: default;
+	}
+	button.icons {
+		padding: 0.27em 0.5em;
+	}
+	button.icons .fa {
+		font-size: 130%;
+		margin-top: 0;
+	}
+	button.small {
+		padding: 4px 10px;
+		font-size: 0.8em;
+	}
+	.formIem.buttonCont {
+		text-align: center;
+	}
+}

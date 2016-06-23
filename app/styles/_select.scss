@@ -1,0 +1,32 @@
+/* Select */
+.uix {
+    .select-wrapper {
+        select {
+            border: 0;
+            background-position: right center;
+            appearance: none;
+            background-repeat: no-repeat;
+            width: 10em;
+            display: inline-block;
+            border-radius: 2px;
+        }
+
+        &:after {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transform: translate(0, 0);
+            color: $mainColorDarker;
+            content: "\f078";
+            margin-left: -2em;
+            pointer-events: none;
+        }
+
+        select::-ms-expand {
+            display: none;
+        }
+    }
+}

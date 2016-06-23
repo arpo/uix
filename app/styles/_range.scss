@@ -1,0 +1,115 @@
+/* Range START */
+.uix {
+    output {
+        cursor: default;
+        padding: 0.2em 0.5em;
+        font-size: 0.7em;
+        box-sizing: border-box;
+        min-width: 3em;
+        margin: 0;
+        text-align: center;
+        user-select: initial;
+        -moz-user-select: initial;
+        -webkit-user-select: initial;
+        position: absolute;
+        top: 0.5em;
+        right: 0;
+    }
+    input[type=range] {
+        -webkit-appearance: none;
+        margin: 0.9em 0;
+        position: relative;
+        top: 0;
+    }
+    input[type=range]:focus {
+        outline: none;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 3.3px;
+        cursor: pointer;
+        box-shadow: 0 0 0 $shadowColor1, 0 0 0 $shadowColor2;
+        background: $mainColor;
+        border-radius: 1.3px;
+        border: 0 solid #010101;
+    }
+    input[type=range]::-webkit-slider-thumb {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        border: 0.4px solid rgba(0, 0, 0, 0);
+        height: 21px;
+        width: 21px;
+        border-radius: 100%;
+        background: $mainColor;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -8.55px;
+    }
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: $mainColor;
+    }
+    input[type=range].noTrack::-webkit-slider-runnable-track {
+        height: 0;
+        border: 0;
+    }
+    input[type=range].red::-webkit-slider-thumb {
+        background: $red;
+    }
+    input[type=range].blue::-webkit-slider-thumb {
+        background: $blue;
+    }
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 3.3px;
+        cursor: pointer;
+        box-shadow: 0 0 0 $shadowColor1, 0 0 0 $shadowColor2;
+        background: $mainColor;
+        border-radius: 1.3px;
+        border: 0.2px solid #010101;
+    }
+    input[type=range]::-moz-range-thumb {
+        box-shadow: 1.2px 1.2px 1.9px $shadowColor1, 0 0 1.2px $shadowColor2;
+        border: 0.4px solid $shadowColor1;
+        height: 20px;
+        width: 20px;
+        border-radius: 17px;
+        background: $mainColor;
+        cursor: pointer;
+    }
+    input[type=range]::-ms-track {
+        width: 100%;
+        height: 3.3px;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+    }
+    input[type=range]::-ms-fill-lower {
+        background: $mainColor;
+        border: 0.2px solid #010101;
+        border-radius: 2.6px;
+        box-shadow: 0 0 0 $shadowColor1, 0 0 0 $shadowColor2;
+    }
+    input[type=range]::-ms-fill-upper {
+        background: $mainColor;
+        border: 0.2px solid #010101;
+        border-radius: 2.6px;
+        box-shadow: 0 0 0 $shadowColor1, 0 0 0 $shadowColor2;
+    }
+    input[type=range]::-ms-thumb {
+        box-shadow: 1.2px 1.2px 1.9px $shadowColor1, 0 0 1.2px $shadowColor2;
+        border: 0.4px solid $shadowColor1;
+        height: 20px;
+        width: 20px;
+        border-radius: 17px;
+        background: $mainColor;
+        cursor: pointer;
+        height: 3.3px;
+    }
+    input[type=range]:focus::-ms-fill-lower {
+        background: $mainColor;
+    }
+    input[type=range]:focus::-ms-fill-upper {
+        background: $mainColor;
+    }
+}
+/*  Range end*/

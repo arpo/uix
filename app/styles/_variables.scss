@@ -1,0 +1,23 @@
+$white: #ffffff;
+$gray: #3e4649;
+$darkgray: #393a3c;
+$green: #22a86d;
+$red: #a82222;
+$blue: #3963b1;
+
+$backgroundColor: $gray;
+
+
+$mainColor: $green;
+$textColor: $white;
+$fieldColor: $darkgray;
+
+
+$mainColorLighter: lighten($mainColor, 5%);
+$mainColorDarker: darken($mainColor, 12%);
+
+$hoverColor: $mainColorLighter;
+$disableColor: $mainColorDarker;
+
+$shadowColor1: #000000;
+$shadowColor2: #0d0d0d;
