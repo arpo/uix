@@ -13,15 +13,17 @@
 
         &:after {
             display: inline-block;
-            font: normal normal normal 14px/1 FontAwesome;
+            //font-family: Font Awesome\ 5 Free;
             font-size: inherit;
+            font-style: normal;
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             transform: translate(0, 0);
             color: $mainColorDarker;
-            content: "\f078";
-            margin-left: -2em;
+            content: "▼";
+            font-size: 11px;
+            margin-left: -2.1em;
             pointer-events: none;
         }
 

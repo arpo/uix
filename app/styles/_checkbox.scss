@@ -20,8 +20,8 @@
     input[type=checkbox]:checked + label .checked {
         display: inline-block;
     }
-    .checked .fa,
-    .unchecked .fa {
+    .checked .fas,
+    .unchecked .fas {
         color: $mainColor;
         font-size: 1.4em;
         vertical-align: bottom;
