@@ -1,17 +1,15 @@
 $white: #ffffff;
+$black: #000000;
 $gray: #3e4649;
 $darkgray: #393a3c;
 $green: #22a86d;
 $red: #a82222;
 $blue: #3963b1;
 
-$backgroundColor: $gray;
-
-
+$backgroundColor: $black;
 $mainColor: $green;
 $textColor: $white;
 $fieldColor: $darkgray;
-
 
 $mainColorLighter: lighten($mainColor, 5%);
 $mainColorDarker: darken($mainColor, 12%);

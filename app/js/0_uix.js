@@ -1,9 +1,9 @@
-var UIX = (function() {
+var UIX = (function () {
 
     function _getVals(type, opt) {
         var defVals = JSON.parse(JSON.stringify(UIX.items[type].defVal)),
             rv = Object.assign({}, defVals, opt);
-        if(!rv) rv = type + '_' + _u.randomKey();
+        if (!rv) rv = type + '_' + _u.randomKey();
         return rv;
 
     }
@@ -80,14 +80,10 @@ var UIX = (function() {
 
 
     return {
-
         add: _add,
-
         addText: _addText,
         addRange: _addRange,
         addButton: _addButton,
-        addCheckbox: _addCheckbox,
-
         addHr: _addHr,
         target: null,
         get: {}

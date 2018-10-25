@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hiber UI 2.0</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/UIx.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/uix.js"></script>
+</head>
+
+<body class="cover" style="background-image: url(images/bg.jpg);">
+
+    <div id="myUi" class="uix">
+
+        <section>
+            <button href="javascript:">Click</button>
+            <button disabled href="javascript:">Click</button>
+        </section>
+
+        <hr>
+
+        <section>
+            <button class="icons" href="javascript:"><i class="fas fa-outdent"></i></button>
+            <button class="red icons" href="javascript:"><i class="fas fa-plus"></i></button>
+            <button class="icons" href="javascript:"><i class="fas fa-trash"></i></button>
+        </section>
+
+        <fieldset>
+            <legend>Checkboxes</legend>
+            <section>
+                <input type="checkbox" id="myCheckbox" name="myCheckbox">
+                <label for="myCheckbox">
+                    <span class="unchecked"><i class="fas fa-square"></i> Follow</span>
+                    <span class="checked"><i class="fas fa-check-square"></i> Follow</span>
+                </label>
+            </section>
+
+            <section class="swish-wrapper">
+                <div class="label">A checkbox anyone? </div>
+                <div class="checkboxThree">
+                    <input id="a_checkbox_anyone_fld" class="swish swish-round fireChange" type="checkbox" checked="">
+                    <label for="a_checkbox_anyone_fld"></label>
+                </div>
+            </section>
+        </fieldset>
+
+
+        <section>
+            <button href="javascript:"><i class="fas fa-plus"></i> Add</button>
+            <button class="bigIcon" href="javascript:"><i class="fas fa-floppy-o"></i></button>
+            <button href="javascript:"><i class="fas fa-trash"></i></button>
+        </section>
+
+        <section>
+            <label><i class="fas fa-bolt"></i> Power</label>
+            <!-- <input class="noTrack red" type="range" min="0" max="100" value="0" step="1"> -->
+            <input name="myRange" id="ageInputId" class="full" type="range" min="0" max="100" value="50" step="1"
+                oninput="ageOutputId.value = ageInputId.value">
+            <output name="ageOutputName" id="ageOutputId">50</output>
+            <!-- <input class="noTrack blue" type="range" min="0" max="100" value="100" step="1"> -->
+        </section>
+
+        <section>
+            <label>Name</label>
+            <input class="full" type="text" value="Sven Svensson">
+            <label>Favorite cheese</label>
+            <input list="cheeses" class="half" type="text" value="" placeholder="What do you fancy?">
+            <datalist id="cheeses">
+                <option>Camembert</option>
+                <option>Cheddar</option>
+                <option>Chèvre</option>
+                <option>Cotija</option>
+                <option>Emmental</option>
+                <option>Feta</option>
+                <option>Gouda</option>
+                <option>Manchego</option>
+                <option>Monterey Jack</option>
+                <option>Mozzarella</option>
+                <option>Parmigiano-Reggiano</option>
+                <option>Roquefort</option>
+                <option>Taleggio</option>
+            </datalist>
+            <div>
+                <label class="block">Address <i class="fas fa-map-marker"></i></label>
+                <textarea id="ta1" class="full"></textarea>
+            </div>
+        </section>
+
+        <section>
+            <div class="select-wrapper">
+                <label>Is it?</label>
+                <select class="half" id="dd1">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
