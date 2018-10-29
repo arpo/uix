@@ -22,13 +22,27 @@ UIX.items = {
             value: 'checked' // 'checked' || ''
         }
     },
-    swish: {
+    select: {
         templ: `<section>
-                    <input type="checkbox" {{value}} id="{{id}}" name="{{id}}">
-                    <label for="{{id}}">
-                        <span class="unchecked"><i class="fas fa-square"></i> {{label}}</span>
-                        <span class="checked"><i class="fas fa-check-square"></i> {{label}}</span>
-                    </label>
+                    <div class="select-wrapper">
+                        <label>{{label}}</label>
+                        <select class="half" id="{{id}}">
+                        {{optionTags}}
+                        </select>
+                    </div>
+                </section>`,
+        defVal: {
+            label: 'My dropdown',
+        }
+    },
+
+    swish: {
+        templ: `<section class="swish-wrapper">
+                    <div class="label">{{label}}</div>
+                    <div class="checkboxThree">
+                        <input id="{{id}}" {{value}} class="swish swish-round fireChange" type="checkbox" checked="">
+                        <label for="{{id}}"></label>
+                    </div>
                 </section>`,
         defVal: {
             label: 'My swish',
@@ -43,8 +57,8 @@ UIX.items = {
                 </section>`,
         defVal: {
             min: 0,
-            max: 500,
-            value: 100,
+            max: 100,
+            value: 0,
             step: 1,
             label: 'My range'
         }

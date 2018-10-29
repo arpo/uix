@@ -15,13 +15,77 @@
 
 <body class="cover" style="background-image: url(images/bg.jpg);">
 
-    <div class="uix">
-
-        <div class="pannel">
+    <div id="myUi" class="uix">
+        <!-- <div class="pannel">
             Goooo
-        </div>
-
+        </div> -->
     </div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+
+            const ui1 = new UIX.Interface('#myUi');
+
+            ui1.addHr();
+
+            const t = ui1.addText({
+                id: 'name',
+                value: 'Nisse',
+                label: 'Name',
+                onChange: function (val, e) {
+                    console.log(val);
+                }
+            });
+            //console.log(t.getValue());
+
+            ui1.addSelect({
+                id: 'cheeseDd1',
+                options: 'camembert|Camembert, Cheddar, Chèvre',
+                value: 'Cheddar',
+                label: 'Cheeses',
+                onChange: function (val, e) {
+                    console.log(val);
+                }
+            });
+
+            ui1.addRange({
+                id: 'slider1',
+                value: 50,
+                label: 'Slide1',
+                onChange: function (val, e) {
+                    console.log(val);
+                }
+            });
+            ui1.addButton({
+                id: 'buttonGo',
+                label: 'Go',
+                onClick: function (e) {
+                    console.log('Clicked');
+                }
+            });
+
+            ui1.addCheckbox({
+                id: 'cb1',
+                label: 'Is nice',
+                value: 'checked',
+                onChange: function (val, e) {
+                    console.log(val);
+                }
+            });
+
+            ui1.addSwish({
+                id: 'swish',
+                label: 'Is nice',
+                value: 'checked',
+                onChange: function (val, e) {
+                    console.log(val);
+                }
+            });
+
+            //console.log(ui1);
+
+        };
+    </script>
 
 </body>
 

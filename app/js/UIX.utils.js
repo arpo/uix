@@ -31,8 +31,13 @@ var _u = {
 		return Object.keys(obj).length;
 	},
 	idIndex: 0,
-	getId: function () {
-		return _u.now().toString(36).replace('.', '') + (_u.idIndex++ % 1024).toString(36);
+	getId: () => {
+		return (
+			_u
+			.now()
+			.toString(36)
+			.replace('.', '') + (_u.idIndex++ % 1024).toString(36)
+		);
 	},
 	now: function () {
 		return performance.now() || Date.now();
